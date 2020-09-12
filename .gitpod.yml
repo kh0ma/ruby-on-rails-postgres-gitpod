@@ -3,5 +3,8 @@ image:
 
 tasks:
   - before: gem install rails
-    init: bundler install
+    init: bundler install && psql -c "create role myapp with createdb login password 'password1';" && rake db:setup
     command: rails s
+vscode:
+  extensions:
+    - bajdzis.vscode-database@2.2.3:nBZ1zB8XJrPu5oCtaTFB+g==
