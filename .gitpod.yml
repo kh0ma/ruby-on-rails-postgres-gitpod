@@ -1,0 +1,7 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - before: gem install rails
+    init: bundler install
+    command: rails s
